@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Rawtracks-Website</title>
+</head>
+<body onload="myfun()">
+    <div id="loading"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                envato<span>market</span>
+            </div>
+            <div class="icon">
+                <button href="#">Buy Now</button>
+            </div>
+        </nav>
+        <div class="content">
+            <img src="New folder/WhatsApp Image 2023-07-11 at 4.56.07 PM.jpeg" >
+        <div class="wave">
+            <img src="New folder/landing-gif-bg-2.gif" >
+        </div>
+        </div>        
+    </header>
+    <section class="filter-gallery">
+        <h1>Websites for your tunes</h1>
+        <div class="row">
+            <div class="column">
+              <img src="New folder/Raw-3D-Final.jpg">
+              <img src="New folder/Raw-Album-Showcase.jpg">
+              <img src="New folder/Raw-Artist.jpg">
+              <img src="New folder/Raw-Main-Home.jpg">
+            </div>
+            <div class="column">
+                <img src="New folder/Raw-Festival.jpg">
+                <img src="New folder/Raw-Horizontal-Slider.jpg">
+                <img src="New folder/Raw-Label.jpg">  >
+            </div>
+          </div>
+    </section>
+    <section class="disc">
+        <div class="head">
+            <h1>Discography layouts</h1>
+            <p>present your albums</p>
+        </div>
+        <div class="slider">
+            <span id="slide-1"></span>
+            <span id="slide-2"></span>
+            <span id="slide-3"></span>
+            <div class="image-container">
+              <img src="New folder/Raw-Artist.jpg" class="slide" width="500" height="300" />
+              <img src="New folder/Raw-Album-Showcase.jpg" class="slide" width="500" height="300" />
+              <img src="New folder/Raw-Festival.jpg" class="slide" width="500" height="300" />
+            </div>
+            <div class="buttons">
+              <a href="#slide-1"></a>
+              <a href="#slide-2"></a>
+              <a href="#slide-3"></a>
+            </div>
+    </section>
+    <section>
+        <img src="New folder/landing-gif-bg-2.gif">
+    </section>
+    <section class="music" id="music">
+        <div class="container">
+            <div class="image">
+            </div>
+            <div class="music-content">
+                <h1>For upcomung tours and events</h1>
+                <p>Get your fans hyped for every performance! Rawtracks comes with a fantastic collection of event list & single layouts you can use to inform your audience of upcoming shows & festivals.</p>
+                <button class="view">View More</button>
+            </div>
+        </div>
+    </section>
+    <div class="video">
+        <video width="320" height="240" autoplay>
+            <source src="New folder/landing-video-outro.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+    </div>
+    <section>
+        <img src="lan/Landing-rev4-img9.png" width="100%">
+    </section>
+    <section class="footer">
+        <div class="newsletter">
+            <div data-aos="fade-up" data-aos-offset="200">
+                <h2>Subscribe our newsletter</h2>
+            </div>
+            <div class="n-text" data-aos="fade-up-right" data-aos-offset="200">
+                <label>
+                    <input type="email" name="" placeholder="Enter your email">
+                    <button onclick="myfun2()">Subscribe</button>
+    
+                </label>
+            </div>
+        </div>
+    </section>
+    <section class="last">
+        <h1>RAWTRACKS</h1>
+        <p>Blast the speakers to full volume</p>
+    </section>
+    <footer>
+        <div class="animaTion">
+        <div id="a1" class="test1"></div>
+    </div>
+    <div class="audio_container">
+        <div class="small_waves"></div>
+        <div class="small_waves"></div>
+        <div class="small_waves"></div>
+        <div class="small_waves"></div>
+        <div class="small_waves"></div>
+        <div class="small_waves"></div>
+        <div class="small_waves"></div>
+        <div class="small_waves"></div>
+        <div class="small_waves"></div>
+        <audio id = "idAudio" >
+		<source src = "track1.mp3" type = "audio/ogg" >
+		<source src = "track1.mp3" type ="audio/mpeg">The browser is not supporting the audio element...
+	</audio>
+    <span>
+        <button id = "playAudio" onclick = "playaudio()" type = "button" > song OFF </button>
+    </span>
+	<script>
+		var a = document.getElementById("idAudio");
+        var b = document.getElementById("playAudio");
+        var c = document.getElementsByClassName("test1");
+
+		function playaudio() {
+            if(b.innerHTML === " song OFF ")
+            {
+                a.play();
+                a.addEventListener("ended", ()=>{
+                    a.play();
+                })
+                b.innerHTML = " song ON ";
+                b.style.color = "yellow";
+            }
+            else {
+                a.pause();
+                a.currentTime = 0;
+                b.innerHTML = " song OFF "
+                b.style.color = "white";
+            }
+		}
+	</script></div>
+    </footer>
+    <script>
+        var preloader=document.getElementById('loading');
+        function myfun(){
+            preloader.style.display='none';
+        }
+    </script>
+</body>
+</html>
