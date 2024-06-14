@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://rb.gy/fcu2xw" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7531dad165.js" crossorigin="anonymous"></script>
+    <title>QR_Scanner</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 10px;
+  background: url('https://rb.gy/yeujhl') no-repeat;
+  background-size: cover;
+}
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+}
+.navbar .logo{
+  width: 450px;
+	height: auto;
+	padding: 10px 80px;
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: helvetica;
+	color: white;
+	padding: 6px 13px;
+	text-decoration: none;
+	transition: .4s;
+}
+.navbar ul li a.active{
+	background: rgb(26, 131, 131);
+  border: 1px solid aqua;
+	border-radius: 20px;
+}
+.navbar ul li a:hover{
+	background: aquamarine;
+    border: 1px solid rgb(26, 131, 131);
+	color: rgb(26, 131, 131);;
+	border-radius: 20px;
+}
+.wrapper{
+  height: 270px;
+  width: 420px;
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px 30px 35px;
+  transition: height 0.2s ease;
+}
+.wrapper.active{
+  height: 525px;
+}
+.wrapper form{
+  height: 210px;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  border-radius: 7px;
+  background: rgb(26, 131, 131);
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease;
+}
+.wrapper.active form{
+  height: 225px;
+  border: 2px solid aqua;
+  pointer-events: none;
+}
+form img{
+  display: none;
+  max-width: 148px;
+}
+.wrapper.active form img{
+  display: block;
+}
+.wrapper.active form .content{
+  display: none;
+}
+form .content i{
+  color: aliceblue;
+  font-size: 55px;
+}
+form .content p{
+  color: aliceblue;
+  font-family: sans-serif;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.wrapper .details{
+  opacity: 0;
+  margin-top: 25px;
+  pointer-events: none;
+}
+.wrapper.active .details{
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+.details textarea{
+  width: 100%;
+  height: 128px;
+  outline: none;
+  resize: none;
+  border: 2px solid aqua;
+  color: aliceblue;
+  font-size: 18px;
+  background: rgb(26, 131, 131);
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+textarea::-webkit-scrollbar{
+  width: 0px;
+}
+textarea:hover::-webkit-scrollbar{
+  width: 5px;
+}
+textarea:hover::-webkit-scrollbar-track{
+  background: none;
+}
+textarea:hover::-webkit-scrollbar-thumb{
+  background: rgb(26, 131, 131);
+  border-radius: 8px;
+}
+.details .buttons{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons button{
+  height: 55px;
+  outline: none;
+  border: 1px solid rgb(26, 131, 131);
+  font-weight: 550;
+  border: 2px solid aqua;
+  font-size: 20px;
+  cursor: pointer;
+  color: aliceblue;
+  border-radius: 30px;
+  background: rgb(26, 131, 131);
+  transition: transform 0.3s ease;
+  width: calc(100% / 2 - 10px);
+}
+.buttons button:hover{
+  background: aquamarine;
+  border: 2px solid rgb(26, 131, 131);
+	color: rgb(26, 131, 131);
+}
+.buttons button:active{
+  transform: scale(0.95);
+}
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="page1.html"><img src="https://rb.gy/bnazrq" alt="AuthenticWorks" class="logo"></a>
+<ul>
+<li><a href="page1.html">Home</a></li>
+<li><a href="page2.html">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a class="active" href="page4.html">QR Code Scanner</a></li>
+<li><a class="account" href="page3.html"><i class="fa-solid fa-user-large"></i></a></li>
+</ul>
+</nav>
+      <div class="wrapper">
+        <form action="#">
+          <input type="file" hidden>
+          <img src="#" alt="qr-code">
+          <div class="content">
+            <i class="fas fa-cloud-upload"></i>
+            <p>Upload QR Code to Verify Product</p>
+          </div>
+        </form>
+        <div class="details">
+          <textarea spellcheck="false" disabled></textarea>
+          <div class="buttons">
+            <button class="close">Back</button>
+            <button class="copy">Verify</button>
+          </div>
+        </div>
+      </div>
+<script>
+const wrapper = document.querySelector(".wrapper"),
+form = document.querySelector("form"),
+fileInp = form.querySelector("input"),
+infoText = form.querySelector("p"),
+closeBtn = document.querySelector(".close"),
+copyBtn = document.querySelector(".copy");
+
+function fetchRequest(file, formData) {
+    infoText.innerText = "Scanning QR Code...";
+    fetch("http://api.qrserver.com/v1/read-qr-code/", {
+        method: 'POST', body: formData
+    }).then(res => res.json()).then(result => {
+        result = result[0].symbol[0].data;
+        infoText.innerText = result ? "Upload QR Code to Verify Product" : "Couldn't scan QR Code";
+        if(!result) return;
+        document.querySelector("textarea").innerText = result;
+        form.querySelector("img").src = URL.createObjectURL(file);
+        wrapper.classList.add("active");
+    }).catch(() => {
+        infoText.innerText = "Couldn't scan QR Code";
+    });
+}
+
+fileInp.addEventListener("change", async e => {
+    let file = e.target.files[0];
+    if(!file) return;
+    let formData = new FormData();
+    formData.append('file', file);
+    fetchRequest(file, formData);
+});
+
+//copyBtn.addEventListener("click", () => {
+//   let text = document.querySelector("textarea").textContent;
+//   navigator.clipboard.writeText(text);});
+
+form.addEventListener("click", () => fileInp.click());
+closeBtn.addEventListener("click", () => wrapper.classList.remove("active"));
+</script>
+</body>
+</html>
