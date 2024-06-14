@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="https://rb.gy/fcu2xw" type="image/x-icon">
+		<title>Authentic_Works-Home</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "Poppins", sans-serif;
+	  }
+	  body{
+		margin: 0;
+		padding: 0;
+		background: url('https://rb.gy/yeujhl') no-repeat;
+		background-size: cover;
+		height: 100vh;
+		overflow: hidden;
+	  }
+	.navbar{
+		position: fixed;
+		height: 80px;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,0,0.5);
+	}
+	.navbar .logo{
+		width: 300px;
+		height: auto;
+		padding: 10px 10px;
+		padding-left: 50px;
+	}
+	.navbar ul{
+		float: right;
+		margin-right: 20px;
+	}
+	.navbar ul li{
+		list-style: none;
+		margin: 0px;
+		display: inline-block;
+		line-height: 80px;
+	}
+	.navbar ul li{
+		 list-style: none;
+		 margin: 0 8px;
+		display: inline-block;
+		line-height: 80px;
+	}
+	
+	.navbar ul li input{
+		border: none;
+		background-color: rgba(0, 0, 0, 0);
+		font-size: 20px;
+		font-family: helvetica;
+		color: white;
+		padding: 6px 13px;
+		text-decoration: none;
+		transition: .4s;
+	}
+				  
+	.navbar ul li input:hover{
+			padding: 10px;
+			background: aquamarine;
+			border: 1px solid rgb(26, 131, 131);
+			color: rgb(26, 131, 131);;
+			border-radius: 20px;
+		}
+	.center
+	{
+		padding: 25px;
+		position: absolute;
+		left: 50%;
+		top: 55%;
+		transform: translate(-50%, -50%);
+		font-family: sans-serif;
+		user-select: none;
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 20px;
+	}
+	.center h1{
+		color: white;
+		font-size: 60px;
+		width: 900px;
+		font-weight: bold;
+		text-align: center;
+	}
+	.center h2 {
+		color: white;
+		font-size: 37px;
+		font-weight: bold;
+		margin-top: 10px;
+		width: 885px;
+		text-align: center;
+	}
+	.center ul
+    {
+        list-style: none;
+        color: white;
+		font-size: 20px;
+		font-weight: bold;
+		margin-top: 10px;
+		width: 885px;
+		text-align: center;
+    }
+	
+	form
+	{
+		padding: 5px;
+	}
+	.buttons button{
+		height: 50px;
+		width: 155px;
+		font-size: 18px;
+		font-weight: 600;
+		color:aliceblue;
+		background: rgb(26, 131, 131);
+		outline: none;
+		cursor: pointer;
+		border: 1px solid aqua;
+		border-radius: 25px;
+		transition: .4s;
+	}
+	.buttons .btn2{
+		margin-left: 0px;
+	}
+	.buttons button:hover{
+		background: aquamarine;
+		color: rgb(26, 131, 131);
+	}
+	
+	input[type="submit"]:hover{
+	  	background-color: aquamarine;
+	  	color: rgb(26, 131, 131);
+		border: 1px solid rgb(26, 131, 131);
+		transition: .5s;
+  	}
+
+	form
+  	{
+		padding: 6px;
+  	}
+	</style>
+</head>
+					
+					
+					
+					
+<body>
+ <nav class="navbar">
+	<img src="https://rb.gy/bnazrq" alt="AuthenticWorks" class="logo">
+	  <ul>
+		<li>
+		  <form method="post" action="/">
+			<input type="submit" value="Home">
+		  </form>
+		</li>
+				  
+		<li>
+		  <form method="post" action="/about">
+			<input type="submit" value="About">
+		  </form>
+		</li>
+						  
+									  
+		<li>
+		  <form method="post" action="/about">
+			<input type="submit" value="Services">
+		  </form>
+		</li>
+									  
+		<li>
+		  <form method="post" action="/verify_product">
+			<input type="submit" value="QR Code Scanner">
+		  </form>
+		</li>
+									  
+		<li>
+		  <form method="post" action="/sign_in">
+			<input type="submit" value="Sign_up">
+		  </form>
+		</li>		  
+		</ul>
+	</nav>
+    <div class="center">
+	<h2>{{e}}</h2>
+	<script>
+		if (h2=="BLOCK FOUND"){
+			color:red;
+
+		}
+	</script>
+    <h2>{{f}}</h2>
+    <ul>
+        <li>hash: {{hash}}</li>
+        <li>previous hash: {{prev_hash}}</li>
+        <li>date of entry: {{date}}</li>
+        <li>id of product: {{id}}</li>
+        <li>proof of work: {{proof_of_work}}</li>
+    </ul>
+</div>
+</body>
+</html>

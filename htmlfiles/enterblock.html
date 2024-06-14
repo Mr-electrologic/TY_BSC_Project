@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <style>
+		@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+		*{
+					margin: 0;
+					padding: 0;
+					box-sizing: border-box;
+					font-family: "Poppins", sans-serif;
+				  }
+				  body{
+					margin: 0;
+					padding: 0;
+					background: url('https://rb.gy/yeujhl') no-repeat;
+					background-size: cover;
+					height: 100vh;
+					overflow: hidden;
+				  }
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+}
+.navbar .logo{
+    width: 300px;
+	height: auto;
+	padding: 10px 10px;
+	padding-left: 50px;
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li{
+ 	list-style: none;
+ 	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+
+.navbar ul li input{
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	font-size: 20px;
+	font-family: helvetica;
+	color: white;
+	padding: 6px 13px;
+	text-decoration: none;
+					transition: .4s;
+				  }
+			  
+.navbar ul li input:hover{
+		padding: 10px;
+		background: aquamarine;
+		border: 1px solid rgb(26, 131, 131);
+		color: rgb(26, 131, 131);;
+		border-radius: 20px;
+	}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.5);
+}
+.center h1{
+  text-align: left;
+  font-weight: 600;
+  font-size: 28px;
+  color: white;
+  padding-top: 10px;
+  padding-left:  20px;
+}
+
+.h1_of
+{
+  padding-top: 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid rgb(232, 237, 239);
+  margin: 30px 0;
+}
+.txt_field input{
+  width: 100%;
+  color: white;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color:rgb(232, 237, 239);
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: rgb(232, 237, 239);
+  transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: rgb(232, 237, 239);
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+  width: 100%;
+}
+.pass{
+  margin: -5px 0 20px 5px;
+  color: rgb(232, 237, 239);
+  cursor: pointer;
+}
+.pass:hover{
+  text-decoration: underline;
+}
+input[type="submit"]{
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: rgb(27, 32, 34);
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover{
+  border-color: rgb(226, 234, 236);
+  background-color: rgb(15, 18, 20);
+  transition: .5s;
+}
+.signup_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+.signup_link a{
+  color: rgb(4, 123, 156);
+  text-decoration: none;
+}
+.signup_link a:hover{
+  text-decoration: underline;
+}
+
+    </style>
+  </head>
+  
+  
+  
+  
+  <body>
+    
+<nav class="navbar">
+
+  <img src="https://rb.gy/bnazrq" alt="AuthenticWorks" class="logo">
+   <ul>
+    <li>
+      <form method="post" action="/">
+      <input type="submit" value="Home">
+      </form>
+    </li>
+          
+    <li>
+      <form method="post" action="/about">
+      <input type="submit" value="About">
+      </form>
+    </li>
+              
+                    
+    <li>
+      <form method="post" action="/about">
+      <input type="submit" value="Services">
+      </form>
+    </li>
+                    
+    <li>
+      <form method="post" action="/verify_product">
+      <input type="submit" value="QR Code Scanner">
+      </form>
+    </li>
+              
+    <li>
+      <form method="post" action="/sign_in">
+      <input type="submit" value="Sign_up">
+      </form>
+    </li>
+    </ul>
+  </nav>
+  
+    <div class="center">
+      <h1>WELCOM {{ n }}...</h1>
+      <h1 class="h1_of">ENTER BLOCK</h1>
+      <form method="post" action="/enter_block">
+        <div class="txt_field">
+          <input type="text" name="name" required>
+          <span></span>
+          <label>PRODUCT NAME:</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" name="id" required>
+          <span></span>
+          <label>PRODUCT ID:</label>
+        </div>
+        <div class="txt_field">
+            <input type="number" name="price" min="1" required>
+            <span></span>
+            <label>PRODUCT PRICE:</label>
+          </div>
+          <div class="txt_field">
+            <input type="text" name="date" required>
+            <span></span>
+            <label>MANUFACTURING DATE:</label>
+          </div>
+        <input type="submit" value="ENTER BLOCK">
+        <br>
+        <br>
+      </form>
+    </div>
+  </body>
+</html>

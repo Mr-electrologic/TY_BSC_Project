@@ -1,0 +1,5 @@
+/ngrok 
+
+ngrok config add-authtoken 2KM7QkUQMpMusWrDKPyuz6GIA3x_Jy1AtQwfctYRpfF9AXph
+
+./ngrok http [port no.]

@@ -1,0 +1,10 @@
+**************************-block 1-*************************
+ID: MYA-L22
+name: Data Science With Python
+price: 2345656.0
+date of manufacturing: 07-09-2022
+proof of work: 8692158604.0
+prev_hash: 0
+current_hash: 00003734192f6b40c35e48b19bfc6eaf4797b96fc2cbe0d1ee4c85e19cbe9497
+ ************************************************************
+
